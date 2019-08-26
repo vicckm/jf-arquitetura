@@ -1,185 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <title>JR Arquitetura</title>
+</head>
+<body>
+	<!-- continuação header... -->
+		<header>
+			<div class="logo">
+				<img src="img/logo.jpg" alt="JF Arquitetura">
+			</div>
+			<nav class="nav-bar abs-pos">
+				<ul>
+					<li><a href="#inicio">Início</a></li>
+					<li><a href="#quem-somos">Quem Somos</a></li>
+					<li><a href="#area-de-atuacao">Área de Atuação</a></li>
+					<li><a href="#servicos-realizados">Serviços Realizados</a></li>
+					<li><a href="#orcamento">Orçamento</a></li>
+			</ul>
+			</nav>
+		</header>
+		<section class="ghost"></section>
+		<main>
+			<section id="inicio">
+					<div class="container">
+						<h1>Início</h1>
 
-    <title>JF Arquitetura</title>
-  </head>
-  <body>
+					</div>
+				</section>
 
-<!-- Header -->
-     <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse container" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link mr-2 text-warning" href="#">Início</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link mr-2 text-warning" href="#quem-somos">Quem Somos</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link mr-2 text-warning" href="#area-de-atuacao">Área de Atuação</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link mr-2 text-warning" href="#">Serviços Realizados</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link mr-2 text-warning" href="#">Orçamento</a>
-                    </li>
-                </ul>
-            <div> 
-                <button class="btn btn-outline-light text-warning btn-expand-lg my-2 mx-2 my-sm-0" type="submit">Cadastre-se</button>
-                <button class="btn btn-outline-light text-warning my-2 my-sm-0" type="submit">Login</button>
-            </div>
-            </div>
-        </nav>
-	 </header>
-<!-- Fim header -->
-		
-<!-- Introdução -->		
-        <section id="intro" class="container-fluid bg-primary clearfix">
-           <div class="container">
-            <p class="display-1">JF Arquitetura</p>
-            </div>
-        </section>
-<!-- Fim introdução -->
+		<section id="quem-somos">
+			<div class="container">
+					<h1>Quem Somos</h1>
+						<div class="grid-8"><img src="img/exemplo.png" alt="Funcionários"></div>
+						<div class="grid-8 quem-somos-texto">
+							<h2>Nossa História</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat mattis ante fringilla ultrices. Donec id lectus vel elit gravida mattis. Phasellus rhoncus nibh non mauris aliquam, a vestibulum ligula condimentum. Sed rhoncus maximus nulla. Sed enim justo, aliquet a laoreet sollicitudin, lobortis vel diam. Suspendisse hendrerit massa in dapibus egestas. Nulla pulvinar ultricies est, vel porta dui commodo at.
+							</p>
+						</div>
+				</div>
+		</section>
+		<section id="area-de-atuacao">Área de Atuação</section>
+		<section id="servicos-realizados">Serviços Realizados</section>
+		<section id="orcamento">Orçamento</section>
+ </main>
+
    
-<!-- Quem Somos -->
-   <section id="quem-somos" class="container clearfix">
-       <h2 class="display-4">Quem Somos</h2>
-           <div class="row">
-               <img class="col-sm-5" src="img/exemplo.png" alt="Funcionários">
-               <div class="col-sm-6 quem-somos-texto">
-                <h3 class="h3">Nossa história</h3>
-                <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat mattis ante fringilla ultrices. Donec id lectus vel elit gravida mattis. Phasellus rhoncus nibh non mauris aliquam, a vestibulum ligula condimentum. Sed rhoncus maximus nulla. Sed enim justo, aliquet a laoreet sollicitudin, lobortis vel diam. Suspendisse hendrerit massa in dapibus egestas. Nulla pulvinar ultricies est, vel porta dui commodo at.
-                </p>
-           </div>
-       </div>
-   </section>
-<!--Fim quem somos-->
-
-<!-- Área de atuação -->
-<section id="area-de-atuacao" class="clearfix">
-  <h2 class="display-4">Área de Atuação</h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mt-2 d-flex justify-content-start d-inline-flex">
-          <div class="card-corpo">
-            <div class="card-header">
-              <h4>Autovistoria Predial</h4>
-            </div>
-            <div class="card-texto">
-              <p>
-              A vistoria técnica, também conhecida como autovistoria, é uma inspeção predial realizada por profissional legalmente habilitado, com objetivo de avaliar o estado geral da edificação no que diz respeito a sua conservação, estabilidade e segurança.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4 mt-2 d-flex justify-content-center d-inline-flex">
-          <div class="card-corpo">
-            <div class="card-header">
-              <h4>Laudo Técnico</h4>
-            </div>
-            <div class="card-texto">
-              <p>
-                É de fundamental importância porque possibilita detectar a ocorrência de possíveis patologias construtivas nas diversas edificações, independente da idade do móvel. Nele são apontados todos os problemas que estejam ou venham a causar danos de       natureza materiais, pessoais e de responsabilidades civis.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4 mt-2 d-flex justify-content-end d-inline-flex">
-          <div class="card-corpo">
-            <div class="card-header">
-              <h4>Vistoria Locativa</h4>
-            </div>
-            <div class="card-texto">
-              <p>
-                A vistoria locativa registra para o locador e locatário o estado do imóvel antes e depois do período de locação. Evita dúvidas e incertezas que normalmente ocorrem quando é feita a vistoria e possibilita a comparação com o estado inicial do imóvel.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        
-        
-        
-        <div class="col-md-4 mt-2 d-flex justify-content-start d-inline-flex">
-          <div class="card-corpo">
-            <div class="card-header">
-              <h4>Laudo Técnico de Reforma</h4>
-            </div>
-            <div class="card-texto-meio">
-              <p>
-               O objetivo do desse laudo visa reduzir a possibilidade da existência de atropelos durante a execução dos serviços, que normalmente ocorrem numa reforma.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4 card-meio mt-2 d-flex justify-content-center d-inline-flex">
-          <div class="card-corpo">
-            <div class="card-header">
-              <h4>Laudo Técnico de Vizinhança</h4>
-            </div>
-            <div class="card-texto-meio">
-              <p>
-               Esse tipo de laudo tem por objetivo demonstrar em uma determinada data, a real situação dos imóveis que existem no entorno de uma futura obra.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4 card-meio mt-2 d-flex justify-content-end d-inline-flex">
-          <div class="card-corpo">
-            <div class="card-header">
-              <h4>Laudo de Inspeção de Edifício em Garantia</h4>
-            </div>
-            <div class="card-texto-meio">
-              <p>
-                Este laudo serve para constatar as condições técnicas da obra, uma vez que já foi entregue, e encontra-se em pleno uso e funcionamento com todos os sistemas instalados, agora na fase pós entrega.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-12 mt-2 d-flex justify-content-center d-inline-flex">
-          <div class="card-corpo">
-            <div class="card-header">
-              <h4>Laudo Técnico de Recebimento de Obra</h4>
-            </div>
-            <div class="card-texto">
-              <p>
-                Trata-se de uma vistoria que tem como objetivo formalizar a entrega da obra junto ao construtor, mediante verificação do seu estado construtivo, bem como de seus sistemas instalados, de forma a analisar a sua conformidade técnica com projetos, memórias descritivos e demais documentação apresentada previamente.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        
-        
-      </div>
-    </div>
-</section>
-<!--Fim área de atuação-->
-   
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-  </body>
+    <script type="text/javascript" src="scripts/script.js"></script>
+</body>
 </html>
