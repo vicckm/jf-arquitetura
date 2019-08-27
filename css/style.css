@@ -6,6 +6,7 @@
     box-sizing: border-box;
 		font-family: 'Roboto', sans-serif;;
 }
+
 img {
 	max-width: 100%;	
 }
@@ -43,6 +44,7 @@ header {
 	display: grid;
 	justify-content: center;
 	align-content: center;
+	z-index: 5;
 }
 
 .nav-bar ul {
