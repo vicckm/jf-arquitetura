@@ -10,50 +10,73 @@ function toggleNavBar() {
 		$navBar.classList.remove('fix-pos');
 	}
 }
-const $intLink = document.querySelectorAll('.int-link')[4];
-const $orcamentoSect = document.querySelector('#orcamento');
-$intLink.addEventListener('click',scrollToSect,false);
-function scrollToSect() {
-	window.scrollTo({
-		top: $orcamentoSect.offsetTop - $navBar.offsetHeight,
-		left: 0,
-		behavior: 'smooth'
-	});
-} 
 
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
+new SimpleSlide({ 
+  slide: "principal", // nome do atributo data-slide="principal"  
+  nav: true,
+  time: 3000 // tempo de transição dos slides
+});
+
+// Identificar o clique no menu
+// Verificar o item que foi clicado e fazer referência com o alvo
+// Verificar a distância entre o alvo e o topo
+// Animar o scroll até o alvo
+
+const menuItems = document.querySelectorAll('.nav-bar a[href^="#"]');
+
+function getScrollTopByHref(element) {
+	const id = element.getAttribute('href');
+	return document.querySelector(id).offsetTop;
+}
+
+function scrollToPosition(to) {
+  // Caso queira o nativo apenas
+	// window.scroll({
+	// top: to,
+	// behavior: "smooth",
+	// })
+  smoothScrollTo(0, to);
+}
+
+function scrollToIdOnClick(event) {
+	event.preventDefault();
+	const to = getScrollTopByHref(event.currentTarget)- 50;
+	scrollToPosition(to);
+}
+
+menuItems.forEach(item => {
+	item.addEventListener('click', scrollToIdOnClick);
+});
+
+// Caso deseje suporte a browsers antigos / que não suportam scroll smooth nativo
+/**
+ * Smooth scroll animation
+ * @param {int} endX: destination x coordinate
+ * @param {int) endY: destination y coordinate
+ * @param {int} duration: animation duration in ms
+ */
+function smoothScrollTo(endX, endY, duration) {
+  const startX = window.scrollX || window.pageXOffset;
+  const startY = window.scrollY || window.pageYOffset;
+  const distanceX = endX - startX;
+  const distanceY = endY - startY;
+  const startTime = new Date().getTime();
+
+  duration = typeof duration !== 'undefined' ? duration : 400;
+
+  // Easing function
+  const easeInOutQuart = (time, from, distance, duration) => {
+    if ((time /= duration / 2) < 1) return distance / 2 * time * time * time * time + from;
+    return -distance / 2 * ((time -= 2) * time * time * time - 2) + from;
+  };
+
+  const timer = setInterval(() => {
+    const time = new Date().getTime() - startTime;
+    const newX = easeInOutQuart(time, startX, distanceX, duration);
+    const newY = easeInOutQuart(time, startY, distanceY, duration);
+    if (time >= duration) {
+      clearInterval(timer);
     }
-  });
+    window.scroll(newX, newY);
+  }, 1000 / 60); // 60 fps
+};

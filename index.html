@@ -7,17 +7,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add("js")</script>
     <title>JR Arquitetura</title>
 </head>
 <body>
-	<!-- continuação header... -->
+	
 		<header>
-			<div class="logo">
+			<div id="index" class="logo">
 				<img src="img/logo.jpg" alt="JF Arquitetura">
 			</div>
 			<nav class="nav-bar abs-pos">
 				<ul>
-					<li class="int-link"><a href="#inicio">Início</a></li>
+					<li class="int-link"><a href="#index">Início</a></li>
 					<li class="int-link"><a href="#quem-somos">Quem Somos</a></li>
 					<li class="int-link"><a href="#area-de-atuacao">Área de Atuação</a></li>
 					<li class="int-link"><a href="#servicos-realizados">Serviços Realizados</a></li>
@@ -29,8 +30,13 @@
 		<main>
 			<section id="inicio">
 					<div class="container">
-						<h1>Início</h1>
-
+						<div class="slider">
+								<ul data-slide="principal">
+									<li><img src="img/slide1.jpg" alt="Casa 1"></li>
+									<li><img src="img/slide2.jpg" alt="Casa 2"></li>
+									<li><img src="img/slide3.jpg" alt="Casa 3"></li>
+								</ul>
+						</div>
 					</div>
 				</section>
 
@@ -51,8 +57,8 @@
 		<section id="orcamento">Orçamento</section>
  </main>
 
-   
+   <script type="text/javascript" src="js/simple-slide"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    
 </body>
 </html>
