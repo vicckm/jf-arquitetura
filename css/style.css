@@ -18,6 +18,24 @@ a {
     text-decoration: none;
 }
 
+.titulo {
+	margin-top: 60px;
+	margin-bottom: 40px;
+	letter-spacing: .1em;
+	text-align: center;
+	font-size: 40px;
+	color: #000;		
+}
+
+.titulo:after{
+	content: "";
+	display: block;
+	width: 60px;
+	height: 2px;
+	border: 2px solid #000;
+	margin: 2px auto 15px auto;;
+}
+
 /*Header*/
 
 header {
@@ -171,4 +189,39 @@ main section:nth-child(even) {
 	margin-top: 20px;
 }
 
+/*Orçamento*/
+
+.tipo-de-servico select {
+	display: block;
+	font-size: 18px;
+	line-height: 25px;
+	margin-bottom: 4px;
+	width: 100%;
+	height: 30px;
+	font-size: 20px;
+	background: #f2f2f3;
+}
+
+.contato_form {
+	padding-right: 60px;
+}
+
+.contato_form label {
+	display: block;
+	font-size: 18px;
+	line-height: 25px;
+	margin-bottom: 4px;
+}
+
+.contato_form input{
+	display: block;
+	width: 100%;
+	border: 4px solid #c0c0c0;
+	background: none;
+	padding: 7px 10px;
+	margin-bottom: 10px;
+	outline: none;
+	font-size: 14px;
+	font-family: Georgia, "Times New Roman", serif 
+}
 	
