@@ -173,6 +173,9 @@ main section:nth-child(even) {
 
 /*Início*/
 
+#inicio {
+	padding: 40px 0;
+}
 
 /* Slide */
 .slider ul li img {
@@ -218,6 +221,10 @@ main section:nth-child(even) {
 }
 
 /*Quem Somos*/
+
+#quem-somos {
+	padding-bottom: 60px;
+}
 
 #quem-somos h1 {
 	margin-top: 60px;
@@ -271,7 +278,14 @@ main section:nth-child(even) {
 
 .card-corpo {
 	text-align: center;
-	margin: 0 auto;
+	margin: 10px;
+	font-size: 18px;
+}
+
+.cards li:last-child {
+	position: relative;
+	left: 320px;
+	margin-bottom: 60px;
 }
 
 
@@ -363,6 +377,7 @@ main section:nth-child(even) {
 	outline: none;
 }
 
+
 .footer {
 	width: 100%;
 	height: 50px;
@@ -426,6 +441,11 @@ main section:nth-child(even) {
 
 #inicio {
 	height: auto;
+}
+
+.cards li:last-child {
+	position: initial;
+	margin-bottom: 60px;
 }
 
 .footer p {
