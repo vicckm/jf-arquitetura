@@ -134,24 +134,30 @@
 				<div class="container">
 					<h1 class="titulo">Orçamento</h1>
 					
-					<form action="" class="contato_form grid-8">
+					<h2 class="subtitulo-preto">Atendemos apenas no Rio e Grande Rio</h3>
+					
+					<form action="recebe.php" method="post">
+					
+					<div class="contato_form grid-8">
 						<label for="nome">Nome *</label>
-						<input type="text" id="nome">
+						<input type="text" id="nome" name="nome" placeholder="Digite seu nome">
 						
 						<label for="email">E-mail *</label>
-						<input type="text" id="email">
+						<input type="email" id="email" name="email" placeholder="Digite seu e-mail">
 	
 						<label for="tel">Telefone</label>
-						<input type="text" id="tel">
+						<input type="text" id="tel" name="tel"  placeholder="Digite seu DDD + número do telefone (opcional)">
 	
-						<label for="tel">Celular *</label>
-						<input type="text" id="cel">
-	
-						<label for="tel">Endereço com número do prédio</label>
-						<input type="text" id="endereco">					
-					</form>
+						<label for="cel">Celular *</label>
+						<input type="number" id="cel" name="cel"  placeholder="Digite seu DDD + número do celular">
+						
+						<label for="nomedopredio">Nome do prédio/casa</label>
+						<input type="text" id="nomedopredio" name="predio"  placeholder="Digite o nome do prédio/edifício/casa">
+						<label for="tel">Endereço do prédio</label>
+						<input type="text" id="end" name="endereco"  placeholder="Ex: Rua São Clemente, 133">				
+					</div>
 					
-					<form action="" class="contato_form grid-8">
+					<div class="contato_form grid-8">
 						<div class="tipo-de-servico">
 							<label for="">Tipo de serviço *</label>
 							<select name="" id="">
@@ -165,26 +171,27 @@
 								<option value="">Vistoria Locativa</option>
 							</select>
 						</div>
-					</form>
+					</div>
 	
-					<form action="" class="form_right grid-8">
+					<div class="form_right grid-8">
 							<label for="">Nº de andares</label>
-							<input type="text" id="numeroAndares">
+							<input type="number" id="numeroAndares" name="andares"  placeholder="Digite o número de andares">
 	
-							<label for="">Nº de aptos ou salas</label>
-							<input type="text" id="numeroAptoOuSalas">
+							<label for="">Nº de apartamentos ou salas</label>
+							<input type="number" id="numeroAptoOuSalas" name="aps" placeholder="Digite o nº de aptos ou salas">
 	
 							<label for="">Nº de elevadores</label>
-							<input type="text" id="numeroElevadores">
+							<input type="number" id="numeroElevadores" name="elev" placeholder="Digite o nº de elevadores">
 	
 							<label for="">Idade do prédio</label>
-							<input type="text" id="idadePredio">
-					</form>
-					<form class="form_textarea grid-16">
+							<input type="number" id="idadePredio" name="idade" placeholder="Digite a idade do prédio">
+					</div>
+					<div class="form_textarea grid-16">
 						<label for="detalhe">Detalhe sua solicitação</label>
-						<textarea id="detalhe"></textarea>
-					</form>
+						<textarea id="detalhe" name="det" placeholder="Descreva aqui com detalhes a sua solicitação"></textarea>
+					</div>
 					<button type="submit" class="btn grid-4">Enviar</button>	
+					</form>
 				</div>	
 			</section>
 			<footer class="footer">
