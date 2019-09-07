@@ -288,12 +288,6 @@ main section:nth-child(even) {
 	font-size: 18px;
 }
 
-.cards li:last-child {
-	position: relative;
-	left: 320px;
-	margin-bottom: 60px;
-}
-
 
 
 
@@ -386,11 +380,12 @@ main section:nth-child(even) {
 }
 
 #orcamento .btn {
-	text-align: center;	
+	float: right;	
 	margin-bottom: 20px;
 	outline: none;
 }
 
+/*Rodapé*/
 
 .footer {
 	width: 100%;
@@ -402,6 +397,94 @@ main section:nth-child(even) {
 	text-align: center;
 	padding-top: 15px;
 }
+
+/*Administrador*/
+
+#form_adm {
+	background: #000;
+	height: 100vh;
+}
+
+#form_adm h2 {
+	padding-top: 20px;
+}
+
+.form-card {
+	border: 2px solid #ccc;
+	padding: 20px;
+}
+
+#form_adm form {
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	padding: 20px 0;
+}
+
+#form_adm form label {
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	line-height: 25px;
+	margin-bottom: 4px;
+}
+
+#form_adm form input {
+	display: block;
+	width: 100%;
+	border: 4px solid #c0c0c0;
+	background: none;
+	padding: 7px 10px;
+	margin-bottom: 10px;
+	outline: none;
+	font-size: 14px;
+	font-family: Georgia, "Times New Roman", serif;
+	color: #fff;
+}
+
+#form_adm button {
+	float: right;
+	margin-top: 10px;
+}
+
+#form_adm a {
+	color: #c0c0c0;
+	background: none;
+	margin-top: 15px;
+	padding-right: 15px;
+	float: left;
+	font-style: 12px;
+	line-height: 20px;
+	letter-spacing: .1em;
+	font-weight: bold;
+	outline: none;
+}
+
+#form_adm a:hover {
+	text-decoration: underline;
+}
+
+#form_adm .btn-adm{
+	color: #c0c0c0;
+	text-transform: uppercase;
+	background: none;
+	border: 3px solid #c0c0c0;
+
+	padding: 5px;
+	font-style: 14px;
+	line-height: 20px;
+	letter-spacing: .1em;
+	font-weight: bold;
+	outline: none;
+}
+
+#form_adm .btn-adm:hover {
+	border-color: #dcdcdc;
+	color: #dcdcdc;
+}
+
+
 /* Responsivo */
 
 /* Smartphones */
