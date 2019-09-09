@@ -333,7 +333,6 @@ main section:nth-child(even) {
 	margin-bottom: 10px;
 	outline: none;
 	font-size: 14px;
-	font-family: Georgia, "Times New Roman", serif 
 }
 
 .form_right {
@@ -356,7 +355,6 @@ main section:nth-child(even) {
 	margin-bottom: 10px;
 	outline: none;
 	font-size: 14px;
-	font-family: Georgia, "Times New Roman", serif 
 }
 
 .form_textarea textarea {
@@ -369,7 +367,6 @@ main section:nth-child(even) {
 	margin-bottom: 20px;
 	outline: none;
 	font-size: 14px;
-	font-family: Georgia, "Times New Roman", serif 
 }
 
 .form_textarea label {

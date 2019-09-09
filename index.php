@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,9 +10,20 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
-		<script type="text/javascript" src="js/jquery.mask.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.js"></script>
+
     <script>document.documentElement.classList.add("js")</script>
-    <title>JF Arquitetura</title>
+    <script type="text/javascript">
+       $(document).ready(function(){    
+       $("#tel").mask("(000)0000-0000");
+       $("#cel").mask("(000)00000-0000");       
+           })
+        
+    
+    
+    
+    </script>
+    <title>JR Arquitetura</title>
 </head>
 <body>
 	
@@ -34,9 +47,9 @@
 					<div class="container">
 						<div class="slider">
 								<ul data-slide="principal">
-									<li><img src="img/1.jpg" alt="Casa 1"></li>
-									<li><img src="img/2.jpg" alt="Casa 2"></li>
-									<li><img src="img/3.jpg" alt="Casa 3"></li>
+									<li><img src="img/slide1.jpg" alt="Casa 1"></li>
+									<li><img src="img/slide2.jpg" alt="Casa 2"></li>
+									<li><img src="img/slide3.jpg" alt="Casa 3"></li>
 								</ul>
 						</div>
 					</div>
@@ -118,7 +131,6 @@
 							</p>
 						</div>
 					</li>
-					
 					<li class="grid-1-3">
 						<div class="card-titulo">
 							<h2 class="subtitulo">Laudo Técnico de Reforma</h2>
@@ -126,26 +138,6 @@
 						<div class="card-corpo">
 							<p>
 								O objetivo do Laudo Técnico de Reforma visa reduzir a possibilidade da existência de atropelos durante a execução dos serviços, que normalmente ocorrem numa reforma.
-							</p>
-						</div>
-					</li>
-					<li class="grid-1-3">
-						<div class="card-titulo">
-							<h2 class="subtitulo">Manutenção Predial</h2>
-						</div>
-						<div class="card-corpo">
-							<p>
-								Manutenção predial e fachadas a empresa atende a condomínios, prédios residenciais e comercias com serviço de reforma de fachadas e serviços de manutenção preventiva, com serviços períodicos de manutenção preventiva ou serviços avulsos. 
-							</p>
-						</div>
-					</li>
-					<li class="grid-1-3">
-						<div class="card-titulo-meio">
-							<h2 class="subtitulo">Desenvolvimento de Projetos</h2>
-						</div>
-						<div class="card-corpo">
-							<p>
-								Elaboramos projetos arquitetônicos para os mais diversos fins, bem como regularização de imóveis na prefeitura, reforma e revitalização de edificações, projetos executivos em instalações em geral.
 							</p>
 						</div>
 					</li>
@@ -157,62 +149,61 @@
 				<div class="container">
 					<h1 class="titulo">Orçamento</h1>
 					
-					<h2 class="subtitulo-preto">Atendemos apenas no Rio e Grande Rio</h3>
+					<h2 class="subtitulo-preto">Atendemos apenas no Rio e Grande Rio</h2>
 					
 					<form action="recebe.php" method="post">
 					
 					<div class="contato_form grid-8">
 						<label for="nome">Nome *</label>
-						<input type="text" id="nome" name="nome" placeholder="Ex.: Maria Joaquina Rodrigues" autocomplete="off" required>
+						<input required type="text" id="nome" name="nome" placeholder="Digite seu nome">
 						
 						<label for="email">E-mail *</label>
-						<input type="email" id="email" name="email" placeholder="Ex.: seuemail@gmail.com" autocomplete="off" required>
+						<input required type="email" id="email" name="email" placeholder="Digite seu e-mail">
 	
 						<label for="tel">Telefone</label>
-						<input type="text" id="tel" name="tel"  placeholder="Digite seu DDD + número do telefone (opcional)" autocomplete="off">
+						<input required type="tell" id="tel"   maxlength="12" name="tel"  placeholder="Digite seu DDD + número do telefone (opcional)">
 	
 						<label for="cel">Celular *</label>
-						<input type="text" id="cel" name="cel"  placeholder="Digite seu DDD + número do celular" autocomplete="off" required>
+						<input required type="tell" id="cel"  maxlength="13"  name="cel"  placeholder="Digite seu DDD + número do celular">
 						
-						<label for="nomedopredio">Nome/Razão Social do prédio *</label>
-						<input type="text" id="nomedopredio" name="predio"  placeholder="Ex.: Condomínio Vicente de Carvalho" autocomplete="off" required>
-						
-						<label for="tel">Endereço do prédio *</label>
-						<input type="text" id="end" name="endereco"  placeholder="Ex.: Rua São Clemente, 133" autocomplete="off" required>				
+						<label for="nomedopredio">Nome do prédio/casa</label>
+						<input required type="text" id="nomedopredio" name="predio"  placeholder="Digite o nome do prédio/edifício/casa">
+						<label for="tel">Endereço do prédio</label>
+						<input required type="text" id="end" name="endereco"  placeholder="Ex: Rua São Clemente, 133">				
 					</div>
 					
 					<div class="contato_form grid-8">
 						<div class="tipo-de-servico">
 							<label for="">Tipo de serviço *</label>
-							<select name="" id="" required>
-								<option value="" disabled selected>Selecione</option>
-								<option value="">Autovistoria Predial</option>
-								<option value="">Laudo Técnico</option>
-								<option value="">Laudo Técnico de Recebimento de Obra</option>
-								<option value="">Laudo Técnico de Reforma</option>
-								<option value="">Laudo Técnico de Vizinhança</option>
-								<option value="">Laudo Técnico de Edifício em Garantia</option>
-								<option value="">Vistoria Locativa</option>
+							<select required name="tipo" id="">
+								<option required value="" disabled selected>Selecione</option>
+								<option value="Autovistoria">Autovistoria Predial</option>
+								<option  value="Laudo Técnico">Laudo Técnico</option>
+								<option  value="Laudo Técnico de Recebimento de Obra">Laudo Técnico de Recebimento de Obra</option>
+								<option  value="Laudo Técnico de Reforma">Laudo Técnico de Reforma</option>
+								<option  value="Laudo Técnico de Vizinhança">Laudo Técnico de Vizinhança</option>
+								<option  value="Laudo Técnico de Edifício em Garantia">Laudo Técnico de Edifício em Garantia</option>
+								<option value="Vistoria Locativa">Vistoria Locativa</option>
 							</select>
 						</div>
 					</div>
 	
 					<div class="form_right grid-8">
-							<label for="">Nº de andares *</label>
-							<input type="number" id="numeroAndares" name="andares"  placeholder="Ex.: 10" autocomplete="off" required>
+							<label for="">Nº de andares</label>
+							<input required type="number" id="numeroAndares" name="andares"  placeholder="Digite o número de andares">
 	
-							<label for="">Nº de apartamentos ou salas *</label>
-							<input type="number" id="numeroAptoOuSalas" name="aps" placeholder="Ex.: 20" autocomplete="off" required>
+							<label for="">Nº de apartamentos ou salas</label>
+							<input required type="number" id="numeroAptoOuSalas" name="aps" placeholder="Digite o nº de aptos ou salas">
 	
-							<label for="">Nº de elevadores *</label>
-							<input type="number" id="numeroElevadores" name="elev" placeholder="Ex.: 3" autocomplete="off" required>
+							<label for="">Nº de elevadores</label>
+							<input type="number" id="numeroElevadores" name="elev" placeholder="Digite o nº de elevadores">
 	
-							<label for="">Idade do prédio *</label>
-							<input type="number" id="idadePredio" name="idade" placeholder="Ex.: 50" autocomplete="off" required>
+							<label for="">Idade do prédio</label>
+							<input type="number" id="idadePredio" name="idade" placeholder="Digite a idade do prédio">
 					</div>
 					<div class="form_textarea grid-16">
 						<label for="detalhe">Detalhe sua solicitação</label>
-						<textarea id="detalhe" name="det" placeholder="Descreva aqui com detalhes a sua solicitação" autocomplete="off"></textarea>
+						<textarea id="detalhe" name="det" placeholder="Descreva aqui com detalhes a sua solicitação"></textarea>
 					</div>
 					<button type="submit" class="btn grid-4">Enviar</button>	
 					</form>
@@ -223,7 +214,10 @@
 				</footer>
  </main>
 
+
 <script type="text/javascript" src="js/simple-slide"></script>
-<script type="text/javascript" src="js/script.js"></script>    
+<script type="text/javascript" src="js/script.js"></script>
+  
+    
 </body>
 </html>

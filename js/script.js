@@ -80,3 +80,8 @@ function smoothScrollTo(endX, endY, duration) {
     window.scroll(newX, newY);
   }, 1000 / 60); // 60 fps
 };
+
+$(document).ready(function(){    
+	$("#tel").mask("(00) 0000-0000");
+	$("#cel").mask("(00) 00000-0000");       
+})
