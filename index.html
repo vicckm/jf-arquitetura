@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
 		<script type="text/javascript" src="js/jquery.mask.js"></script>
     <script>document.documentElement.classList.add("js")</script>
     <title>JF Arquitetura</title>
@@ -31,16 +34,23 @@
 		<section class="ghost"></section>
 		<main>
 			<section id="inicio">
-					<div class="container">
-						<div class="slider">
-								<ul data-slide="principal">
-									<li><img src="img/1.jpg" alt="Casa 1"></li>
-									<li><img src="img/2.jpg" alt="Casa 2"></li>
-									<li><img src="img/3.jpg" alt="Casa 3"></li>
-								</ul>
-						</div>
+				<div id="wrapper">
+					<div id="slider-area" class="owl-carousel">
+						<div style="background-image: url(img/1.jpg)"></div>
+						<div style="background-image: url(img/2.jpg)"></div>
+						<div style="background-image: url(img/3.jpg)"></div>
 					</div>
-				</section>
+
+				<div class="slider-text grid-10">
+					<h2>Seja bem-vindo!</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus vehicula consequat.
+					</p>
+					<a href="#orcamento">Orçamento</a>
+				</div>
+
+				</div>
+			</section>
 
 		<section id="quem-somos">
 			<div class="container">
@@ -222,7 +232,6 @@
 						<p>JF Arquitetura - Alguns direitos reservados</p>
 				</footer>
  </main>
-
 <script type="text/javascript" src="js/simple-slide"></script>
 <script type="text/javascript" src="js/script.js"></script>    
 </body>

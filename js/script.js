@@ -85,3 +85,20 @@ $(document).ready(function(){
 	$("#tel").mask("(00) 0000-0000");
 	$("#cel").mask("(00) 00000-0000");       
 })
+
+$('#slider-area').owlCarousel({
+    loop:true,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})  
+

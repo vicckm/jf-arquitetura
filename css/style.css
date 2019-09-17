@@ -109,7 +109,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	z-index: 5;
+	z-index: 1000;
 }
 
 .nav-bar ul {
@@ -184,67 +184,56 @@ main section:nth-child(even) {
 }
 
 /* Slide */
-.slider ul li img {
-	border-radius: 20px;
+
+#wrapper{
+	position: relative; 
+	height: 100vh;
+}
+#slider-area{
+  width: 100%;
+	margin: 0 auto;
+	padding: 0px;
+	position: relative;
+	z-index: 10;
 }
 
-[data-slide] {
-  position: relative;
+#slider-area .owl-item div{
+    height: 100vh;
+    width: 100%;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: 50% 50%;
+		z-index: 1000;
 }
-[data-slide] > * {
-  position: absolute;
-  top: 20px;
-  opacity: 0;
+.slider-text{
+    position: absolute;
+    left: 30%;
+    z-index: 20;
+    top: 40%;
+    text-align: center;  
 }
-[data-slide] > .active {
-  position: relative;
-  opacity: 1;
-  transition: opacity 500ms;
+.slider-text h2{
+    text-transform: uppercase;
+    font-size: 40px;
+		margin: 0 auto;
+    color: #fff;
 }
-
-[data-slide-nav] {
-  display: block;
-  justify-content: center;
-  text-align: center;
-  margin-top: 30px;
+.slider-text p{
+    font-size: 18px;
+    color: #fff;
+	margin: 0 auto;
 }
-[data-slide-nav] > button {
-  display: inline-block;
-  width: 18px;
-  margin: 4px;
-  height: 18px;
-  border: none;
-  padding: 0px;
-  border-radius: 10px;
-  background: #c0c0c0;
-  text-indent: -10000px;
-	overflow: hidden;
-	outline: none;
-}
-[data-slide-nav] > button.active {
-	background: #000;
-	outline: none;
-}
-
-/*Quem Somos*/
-
-#quem-somos {
-	padding-bottom: 60px;
-}
-
-#quem-somos h1 {
-	margin-top: 60px;
-	text-align: center;
-	font-size: 40px;
-}
-
-#quem-somos img {
-	margin-top: 20px;
-}
-
-#quem-somos .quem-somos-texto {
-	margin-top: 20px;
-	color:#fff;
+.slider-text a{
+   text-decoration: none;
+    text-transform: uppercase;
+    background: tomato;
+    padding: 15px 25px;
+    display: inline-block;
+    -webkit-border-radius:25px;
+    -moz-border-radius:25px;
+    color: #fff;
+		z-index: 1000;
 }
 
 /*Área de atuação*/
