@@ -48,6 +48,32 @@ menuItems.forEach(item => {
 	item.addEventListener('click', scrollToIdOnClick);
 });
 
+const btnItems = document.querySelectorAll('.slider-text a[href^="#"]');
+
+function getScrollTopByHref(element) {
+	const id = element.getAttribute('href');
+	return document.querySelector(id).offsetTop;
+}
+
+function scrollToPosition(to) {
+  // Caso queira o nativo apenas
+	// window.scroll({
+	// top: to,
+	// behavior: "smooth",
+	// })
+  smoothScrollTo(0, to);
+}
+
+function scrollToIdOnClick(event) {
+	event.preventDefault();
+	const to = getScrollTopByHref(event.currentTarget)- 50;
+	scrollToPosition(to);
+}
+
+btnItems.forEach(item => {
+	item.addEventListener('click', scrollToIdOnClick);
+});
+
 // Caso deseje suporte a browsers antigos / que não suportam scroll smooth nativo
 /**
  * Smooth scroll animation
@@ -89,6 +115,8 @@ $(document).ready(function(){
 $('#slider-area').owlCarousel({
     loop:true,
     autoplay:true,
+    nav: true,
+    navText: ["<img src='img/setaLeft.png'>","<img src='img/setaRight.png'>"],
     responsive:{
         0:{
             items:1
