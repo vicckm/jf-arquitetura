@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Out-2019 às 02:26
+-- Tempo de geração: 25-Out-2019 às 00:57
 -- Versão do servidor: 10.4.6-MariaDB
 -- versão do PHP: 7.3.9
 
@@ -50,19 +50,8 @@ CREATE TABLE `orcamento` (
 --
 
 INSERT INTO `orcamento` (`cod`, `tipo_id`, `nome_cli`, `nome_predio`, `email`, `andares`, `apart_salas`, `endereco`, `elevadores`, `idade_pred`, `telefone`, `cel`, `detalhes`, `status`) VALUES
-(2, 2, 'vanisher', 'predio jose', 'vanisher@gmail.com', 12, 54, 'rua 7', 2, 100, '021798914231', '021989142913', 'gordo', 0),
-(3, 2, 'Victoria Marques Sobrinho', '', 'vicck.rj@gmail.com', 0, 0, 'Av. Atlântica, 1130', 0, 0, '21 31046006', '21 979067074', '', 0),
-(4, 2, 'TESTE1', '', 'TESTE1@TESTE1.com', 0, 0, 'TESTE1end', 0, 0, '11 11111111', '11 111111111', '', 0),
-(5, 1, 'T2', '', 'T2@T2.com', 0, 0, 'T2e', 0, 0, '22 22222222', '22 222222222', '', 0),
-(6, 1, 'T3', '', 'T3@T3.com', 3, 33, 'T3e', 333, 3333, '33 33333333', '33 333333333', 'T3e', 0),
-(7, 1, 'Victoria', '', 'vicck.rj@gmail.com', 10, 10, 'Av. Atlântica,1130', 1, 50, '21 30000000', '21 999999999', 'T3edsaaaaaaasadsadsdsad', 0),
-(8, 1, 'a', '', 'a@a.com', 1, 1, 'a3', 1, 1, '111111111111', '22 222222222', 'T3edsaaaaaaasadsadsdsad', 0),
-(9, 0, 'teste4', '', 'teste4@teste4.com', 0, 0, 'teste4teste4teste4teste4teste4teste4', 0, 0, '33 33333333', '22 222222222', '', 0),
-(10, 9, 'teste7', 'teste7', 'teste7@teste7.com', 10, 20, 'teste7', 3, 50, '11 11111111', '22 222222222', 'teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7teste7', 0),
-(11, 0, 'teste8', '', 'teste8@teste8.com', 0, 0, 'teste8teste8teste8teste8teste8', 0, 0, '11 11111111', '11 111111111', '', 0),
-(12, 0, 'teste9', '', 'teste9@teste9.com', 0, 0, 'teste9teste9teste9teste9teste9', 0, 0, '', '22 222222222', '', 0),
-(13, 0, 'teste10', '', 'teste10@teste10.com', 0, 0, 'teste10', 0, 0, '', '22 222222222', '', 0),
-(14, 1, 'teste11', 'teste11teste11teste11teste11teste11', 'teste11@teste11.com', 10, 10, 'teste11teste11teste11teste11teste11', 10, 10, '', '22 222222222', 'teste11teste11teste11teste11teste11teste11teste11teste11teste11teste11', 0);
+(1, 1, 'Vanisher Oliver da Silva', 'Condomínio Laranjeiras', 'vanisher@gmail.com', 10, 20, 'Rua das Laranjeiras, 231', 2, 30, '21 32058500', '21 974563025', '', 0),
+(17, 8, 'Wellerson', 'hshdshd', 'welleroson@ghj.com', 5, 3, 'ojgjsefjs', 5, 2, '21 22222222', '21 987655433', 'drhry', 0);
 
 -- --------------------------------------------------------
 
@@ -157,7 +146,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `orcamento`
 --
 ALTER TABLE `orcamento`
-  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `tipo`
