@@ -352,7 +352,7 @@ owl-prev:hover,
 
 /* Modal */
 
-.modal-container {
+.modal-container-index {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -365,11 +365,11 @@ owl-prev:hover,
   align-items: center;
 }
 
-.modal-container.mostrar {
+.modal-container-index.mostrar {
   display: flex;
 }
 
-.modal {
+.modal-index {
   background: white;
   width: 40%;
   height: auto;
@@ -393,7 +393,7 @@ owl-prev:hover,
   }
 }
 
-.mostrar .modal {
+.mostrar .modal-index {
   animation: modal 0.3s;
 }
 

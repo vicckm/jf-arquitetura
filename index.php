@@ -90,8 +90,8 @@
                 Autovistoria Predial
               </p>
             </div>
-            <div id="modal-cartao" class="modal-container">
-              <div class="modal">
+            <div id="modal-cartao" class="modal-container-index">
+              <div class="modal-index">
                 <button class="fechar">x</button>
                 <div class="modal-corpo">
                   <p class="subtitulo-preto">Autovistoria Predial</p>
@@ -115,8 +115,8 @@
               </p>
             </div>
 
-            <div id="modal-cartao-2" class="modal-container">
-              <div class="modal">
+            <div id="modal-cartao-2" class="modal-container-index">
+              <div class="modal-index">
                 <button class="fechar">x</button>
                 <div class="modal-corpo">
                   <p class="subtitulo-preto">Vistoria Locativa</p>
@@ -139,8 +139,8 @@
               </p>
             </div>
 
-            <div id="modal-cartao-3" class="modal-container">
-              <div class="modal">
+            <div id="modal-cartao-3" class="modal-container-index">
+              <div class="modal-index">
                 <button class="fechar">x</button>
                 <div class="modal-corpo">
                   <p class="subtitulo-preto">Laudo Técnico</p>
@@ -165,8 +165,8 @@
               </p>
             </div>
 
-            <div id="modal-cartao-4" class="modal-container">
-              <div class="modal">
+            <div id="modal-cartao-4" class="modal-container-index">
+              <div class="modal-index">
                 <button class="fechar">x</button>
                 <div class="modal-corpo">
                   <p class="subtitulo-preto">
@@ -193,8 +193,8 @@
               </p>
             </div>
 
-            <div id="modal-cartao-5" class="modal-container">
-              <div class="modal">
+            <div id="modal-cartao-5" class="modal-container-index">
+              <div class="modal-index">
                 <button class="fechar">x</button>
                 <div class="modal-corpo">
                   <p class="subtitulo-preto">Laudo Técnico de Vizinhança</p>
@@ -215,8 +215,8 @@
               </p>
             </div>
 
-            <div id="modal-cartao-6" class="modal-container">
-              <div class="modal">
+            <div id="modal-cartao-6" class="modal-container-index">
+              <div class="modal-index">
                 <button class="fechar">x</button>
                 <div class="modal-corpo">
                   <p class="subtitulo-preto">
@@ -241,8 +241,8 @@
               </p>
             </div>
 
-            <div id="modal-cartao-7" class="modal-container">
-              <div class="modal">
+            <div id="modal-cartao-7" class="modal-container-index">
+              <div class="modal-index">
                 <button class="fechar">x</button>
                 <div class="modal-corpo">
                   <p class="subtitulo-preto">Laudo Técnico de Reforma</p>
@@ -264,8 +264,8 @@
               </p>
             </div>
 
-            <div id="modal-cartao-8" class="modal-container">
-              <div class="modal">
+            <div id="modal-cartao-8" class="modal-container-index">
+              <div class="modal-index">
                 <button class="fechar">x</button>
                 <div class="modal-corpo">
                   <p class="subtitulo-preto">Manutenção Predial</p>
@@ -288,8 +288,8 @@
               </p>
             </div>
 
-            <div id="modal-cartao-9" class="modal-container">
-              <div class="modal">
+            <div id="modal-cartao-9" class="modal-container-index">
+              <div class="modal-index">
                 <button class="fechar">x</button>
                 <div class="modal-corpo">
                   <p class="subtitulo-preto">Desenvolvimento de Projetos</p>

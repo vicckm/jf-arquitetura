@@ -151,16 +151,12 @@
                             </div>
                             <div class="form-group">
                               <label for="recipient-name" class="col-form-label ml-3">Detalhes</label>
-                              <textarea class="form-control ml-3" id="det-name" cols="50" rows="5"></textarea>
+                              <textarea class="form-control ml-3" disabled id="det-name" cols="50" rows="5"></textarea>
                             </div>
 
 
                           </div>
                         </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Baixar</button>
                       </div>
                     </div>
                   </div>
