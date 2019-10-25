@@ -480,7 +480,8 @@
       </div>
     </section>
     <footer class="footer">
-      <p>JF Arquitetura - Todos direitos reservados</p>
+      <p>JF Arquitetura - Todos os direitos reservados</p>
+      <p>Feito com <span class="heart">❤</span> pelo Grupo D - 2019 CSI</p>
     </footer>
   </main>
   <script type="text/javascript" src="js/simple-slide"></script>
