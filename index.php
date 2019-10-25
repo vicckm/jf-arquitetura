@@ -414,22 +414,22 @@
         <form action="recebe.php" method="post">
           <div class="contato_form grid-8">
             <label for="nome">Nome *</label>
-            <input type="text" id="nome" name="nome" placeholder="Ex.: Maria Joaquina Rodrigues" autocomplete="off" required />
+            <input type="text" id="nome" name="nome" placeholder="Ex.: Maria Joaquina Rodrigues" />
 
             <label for="email">E-mail *</label>
-            <input type="email" id="email" name="email" placeholder="Ex.: seuemail@gmail.com" autocomplete="off" required />
+            <input type="email" id="email" name="email" placeholder="Ex.: seuemail@gmail.com" />
 
             <label for="tel">Telefone</label>
-            <input type="text" id="tel" name="tel" placeholder="Digite seu DDD + número do telefone (opcional)" autocomplete="off" />
+            <input type="text" id="tel" name="tel" placeholder="Digite seu DDD + número do telefone (opcional)" />
 
             <label for="cel">Celular *</label>
             <input type="text" id="cel" name="cel" placeholder="Digite seu DDD + número do celular" autocomplete="off" />
 
             <label for="nomedopredio">Nome/Razão Social do prédio *</label>
-            <input type="text" id="nomedopredio" name="nomedopredio" placeholder="Ex.: Condomínio Vicente de Carvalho" autocomplete="off" required />
+            <input type="text" id="nomedopredio" name="nomedopredio" placeholder="Ex.: Condomínio Vicente de Carvalho" />
 
             <label for="tel">Endereço do prédio *</label>
-            <input type="text" id="end" name="endereco" placeholder="Ex.: Rua São Clemente, 133" autocomplete="off" required />
+            <input type="text" id="end" name="endereco" placeholder="Ex.: Rua São Clemente, 133" />
           </div>
 
           <div class="contato_form grid-8">
@@ -460,20 +460,20 @@
 
           <div class="form_right grid-8">
             <label for="">Nº de andares *</label>
-            <input type="number" id="numeroAndares" name="andares" placeholder="Ex.: 10" autocomplete="off" required />
+            <input type="number" id="numeroAndares" name="andares" placeholder="Ex.: 10"  />
 
             <label for="">Nº de apartamentos ou salas *</label>
-            <input type="number" id="numeroAptoOuSalas" name="aps" placeholder="Ex.: 20" autocomplete="off" required />
+            <input type="number" id="numeroAptoOuSalas" name="aps" placeholder="Ex.: 20" autocomplete="off"  />
 
             <label for="">Nº de elevadores *</label>
-            <input type="number" id="numeroElevadores" name="elev" placeholder="Ex.: 3" autocomplete="off" required />
+            <input type="number" id="numeroElevadores" name="elev" placeholder="Ex.: 3" autocomplete="off" />
 
             <label for="">Idade do prédio *</label>
-            <input type="number" id="idadePredio" name="idade" placeholder="Ex.: 50" autocomplete="off" required />
+            <input type="number" id="idadePredio" name="idade" placeholder="Ex.: 50" autocomplete="off" />
           </div>
           <div class="form_textarea grid-16">
             <label for="detalhe">Detalhe sua solicitação</label>
-            <textarea id="detalhe" name="det" placeholder="Descreva aqui com detalhes a sua solicitação" autocomplete="off"></textarea>
+            <textarea id="detalhe" name="det" placeholder="Descreva aqui com detalhes a sua solicitação"></textarea>
           </div>
           <button type="submit" class="btn grid-4">Enviar</button>
         </form>

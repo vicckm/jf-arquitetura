@@ -600,6 +600,7 @@ owl-prev:hover,
 }
 
 .form-card {
+  width: 300px;
   border: 2px solid #ccc;
   padding: 20px;
 }
@@ -660,7 +661,7 @@ owl-prev:hover,
   text-transform: uppercase;
   background: none;
   border: 3px solid #c0c0c0;
-
+  cursor: pointer;
   padding: 5px;
   font-style: 14px;
   line-height: 20px;
@@ -756,7 +757,7 @@ owl-prev:hover,
     font-size: 14px;
     margin-top: 5px;
   }
-  
+
   .nav-bar ul li a {
     padding-bottom: 0;
   }

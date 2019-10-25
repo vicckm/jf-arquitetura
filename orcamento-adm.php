@@ -1,7 +1,15 @@
+<?php
+session_start();
+print_r($_SESSION);exit;
+include('verificaLogin.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
+<!--Ajeitar esse bug. 
+Não ta parecendo o controle de orçamentos;
+Colocar botão de logout;
+-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -166,7 +174,6 @@
               <?php } ?>
             </tbody>
           </table>
-
         </div>
       </div>
     </section>
