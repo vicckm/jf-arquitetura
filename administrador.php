@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,16 +19,9 @@ session_start();
       </div>
       <div class="container">
         <h2 class="subtitulo">Seja bem-vindo!</h2>
-        <?php 
-        if(isset($_SESSION['nao_autenticado']));
-        ?>
         <div>
           <p>Erro: Usuário ou senha inválidos.</p>
         </div>
-        <?php
-        endif;
-        unset($_SESSION['nao_autenticado']);
-        ?>
         <form action="login.php" method="post">
           <div class="form-card ">
             <label>Login</label>

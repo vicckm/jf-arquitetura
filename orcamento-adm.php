@@ -1,15 +1,6 @@
-<?php
-session_start();
-print_r($_SESSION);exit;
-include('verificaLogin.php');
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<!--Ajeitar esse bug. 
-Não ta parecendo o controle de orçamentos;
-Colocar botão de logout;
--->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -41,6 +32,7 @@ Colocar botão de logout;
       <div class="container-controle_orcamento">
         <h2 class="subtitulo">Controle dos Orçamentos</h2>
         <div class="container">
+         <a href="logout.php">Sair</a>
           <table class="table table-hover">
             <thead>
               <tr>
@@ -95,7 +87,7 @@ Colocar botão de logout;
                 <td>
                   <!-- Button trigger modal -->
 
-                  <button type="button" class="btn btn-dark ml-4" data-toggle="modal" data-det="<?php $det ?>" data-idade="<?php echo $idade_predio ?>" data-elev="<?php echo $elev ?>" data-apart="<?php echo $apart ?>" data-and="<?php echo $and ?>" data-tipo="<?php echo $tipo_nome ?>" data-end="<?php echo $end ?>" data-target="#exampleModal" data-predio="<?php echo $nome_predio ?>" data-telefone="<?php echo $telefone ?>" data-celular="<?php echo $cel ?>" data-email="<?php echo $email ?>" data-whatever="<?php echo $nome_cli ?>">+</button>
+                  <button type="button" class="btn btn-dark ml-4" data-toggle="modal" data-det="<?php $det ?>" data-idade="<?php echo $idade_predio ?>" data-elev="<?php echo $elev ?>" data-apart="<?php echo $apart ?>" data-and="<?php echo $and ?>" data-tipo="<?php echo $tipo_nome ?>" data-end="<?php echo $end ?>" data-target="#exampleModal" data-predio="<?php echo $nome_predio ?>" data-telefone="<?php echo $telefone ?>" data-celular="<?php echo $cel ?>" data-email="<?php echo $email ?>" data-whatever="<?php echo $nome_cli ?>" data-det-name="<?php echo $det?>">+</button>
 
 
 
