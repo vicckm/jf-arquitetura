@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Out-2019 às 07:34
+-- Generation Time: 22-Nov-2019 às 16:41
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.3
 
@@ -42,38 +42,17 @@ CREATE TABLE `orcamento` (
   `telefone` char(12) NOT NULL,
   `cel` char(12) NOT NULL,
   `detalhes` varchar(255) DEFAULT NULL,
-  `status` tinyint(1) DEFAULT '0'
+  `status` enum('Pendente','Feito') DEFAULT NULL,
+  `data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `observacoes` varchar(900) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `orcamento`
 --
 
-INSERT INTO `orcamento` (`cod`, `tipo_id`, `nome_cli`, `nome_predio`, `email`, `andares`, `apart_salas`, `endereco`, `elevadores`, `idade_pred`, `telefone`, `cel`, `detalhes`, `status`) VALUES
-(1, 1, 'Vanisher Oliver da Silva', 'Condomínio Laranjeiras', 'vanisher@gmail.com', 10, 20, 'Rua das Laranjeiras, 231', 2, 30, '21 32058500', '21 974563025', '', 0),
-(17, 8, 'Wellerson', 'hshdshd', 'welleroson@ghj.com', 5, 3, 'ojgjsefjs', 5, 2, '21 22222222', '21 987655433', 'drhry', 0);
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `servicos`
---
-
-CREATE TABLE `servicos` (
-  `id` varchar(255) NOT NULL,
-  `titulo` varchar(255) DEFAULT NULL,
-  `descricao` varchar(1000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `servicos`
---
-
-INSERT INTO `servicos` (`id`, `titulo`, `descricao`) VALUES
-('', 'Autovistoria Predial', 'A vistoria técnica, também conhecida como autovistoria, é uma inspeção predial realizada por profissional legalmente habilitado, com objetivo de avaliar o estado geral da edificação no que diz respeito a sua conservação, estabilidade e segurança.'),
-('', 'Vistoria Locativa', 'A Vistoria Locativa registra para o locador e locatário o estado imóvel antes e depois do período de locação. Evita dúvidas e incertezas que normalmente ocorrem quando é feita a vistoria e possibilita a comparação com o estado inicial do imóvel.'),
-('', 'Laudo Técnico', 'É de fundamental importância porque possibilita detectar a ocorrência de possíveis patologias construtivas nas diversas edificações, independente da idade do imóvel. Nele são apontados todos os problemas que estejam ou venham a causar danos de natureza materiais, pessoas e de responsabilidades civis.\r\n\r\n'),
-('4', 'Laudo Técnico de Recebimento de Obra', 'Trata-se de uma vistoria que tem como objetivo formalizar a entrega da obra junto ao construtor, mediante verificação do seu estado construtivo, bem como de seus sistemas instalados, de forma a analisar a sua conformidade técnica com projetos, memoriais descritivos e demais documentação apresentada previamente.');
+INSERT INTO `orcamento` (`cod`, `tipo_id`, `nome_cli`, `nome_predio`, `email`, `andares`, `apart_salas`, `endereco`, `elevadores`, `idade_pred`, `telefone`, `cel`, `detalhes`, `status`, `data`, `observacoes`) VALUES
+(1, 9, 'Samaritano', 'casa da maria', 'samar@gmail.com', 2, 5, 'rua da maria', 2, 5, '21 25555555', '21 988888888', '', 'Pendente', '2019-11-22 08:50:38', 'Muito bem feito');
 
 -- --------------------------------------------------------
 
@@ -110,15 +89,17 @@ INSERT INTO `tipo` (`id`, `nome`) VALUES
 CREATE TABLE `usuario` (
   `usuario_id` int(11) NOT NULL,
   `usuario` varchar(200) NOT NULL,
-  `senha` varchar(32) NOT NULL
+  `senha` varchar(32) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `token` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`usuario_id`, `usuario`, `senha`) VALUES
-(1, 'admin', '0192023a7bbd73250516f069df18b500');
+INSERT INTO `usuario` (`usuario_id`, `usuario`, `senha`, `email`, `token`) VALUES
+(3, 'admin', 'c93ccd78b2076528346216b3b2f701e6', 'wellersonramos360@gmail.com', 'b33c3ab97ebfb693bdbf5917fb1969b5');
 
 --
 -- Indexes for dumped tables
@@ -128,7 +109,8 @@ INSERT INTO `usuario` (`usuario_id`, `usuario`, `senha`) VALUES
 -- Indexes for table `orcamento`
 --
 ALTER TABLE `orcamento`
-  ADD PRIMARY KEY (`cod`);
+  ADD PRIMARY KEY (`cod`),
+  ADD KEY `tipo_id` (`tipo_id`);
 
 --
 -- Indexes for table `tipo`
@@ -150,19 +132,29 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `orcamento`
 --
 ALTER TABLE `orcamento`
-  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tipo`
 --
 ALTER TABLE `tipo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usuario_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `usuario_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Limitadores para a tabela `orcamento`
+--
+ALTER TABLE `orcamento`
+  ADD CONSTRAINT `orcamento_ibfk_1` FOREIGN KEY (`tipo_id`) REFERENCES `tipo` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

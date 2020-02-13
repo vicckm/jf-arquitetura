@@ -11,7 +11,11 @@
   <title>JF Arquitetura</title>
 </head>
 
-<?php $msg = $_GET["msg"]; ?>
+<?php 
+    $msg = $_GET["msg"]; 
+    include 'verificaLogin.php';
+    
+    ?>
 
 
 <body>
@@ -25,7 +29,7 @@
           <?php echo $msg; ?>
            
             
-          <a href="index.php" class="voltar">Voltar para página inicial</a>
+          <a href="painel.php" class="voltar">Voltar para o painel</a>
         </div>
       </div>
     </section>

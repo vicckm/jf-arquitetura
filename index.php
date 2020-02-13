@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+<?php session_start(); ?>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,6 +15,12 @@
   <script type="text/javascript" src="js/owl.carousel.js"></script>
   <script>
     document.documentElement.classList.add("js");
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#telefone-name").mask("(000)0000-0000");
+      $("#celular-name").mask("(000)00000-0000");
+    })
   </script>
   <title>JF Arquitetura</title>
 </head>
@@ -43,16 +49,15 @@
     <section id="inicio">
       <div id="wrapper">
         <div id="slider-area" class="owl-carousel">
-          <div style="background-image: url(img/slide1.jpg)"></div>
-          <div style="background-image: url(img/slide2.jpg)"></div>
-          <div style="background-image: url(img/slide3.jpg)"></div>
+         <div style="background-image: url(img/slide1.jpg);"></div>
+          <div style="background-image: url(img/slide2.jpg);"></div>
+          <div style="background-image: url(img/slide3.jpg);"></div>
         </div>
 
         <div class="slider-text">
-          <h2>Seja bem-vindo!</h2>
+          <h2>Seja bem-vindo</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            cursus vehicula consequat.
+            ao website da JF Arquitetura. Faça já o seu orçamento!
           </p>
           <a href="#orcamento">Orçamento</a>
         </div>
@@ -60,7 +65,7 @@
     </section>
 
     <section id="quem-somos">
-      <div class="container">
+      <div class="container_grid">
         <h1 class="titulo-branco">Quem Somos</h1>
         <div class="grid-8">
           <img src="img/exemplo.png" alt="Funcionários" />
@@ -68,19 +73,16 @@
         <div class="grid-8 quem-somos-texto">
           <h2>Nossa História</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            consequat mattis ante fringilla ultrices. Donec id lectus vel elit
-            gravida mattis. Phasellus rhoncus nibh non mauris aliquam, a
-            vestibulum ligula condimentum. Sed rhoncus maximus nulla. Sed enim
-            justo, aliquet a laoreet sollicitudin, lobortis vel diam.
-            Suspendisse hendrerit massa in dapibus egestas. Nulla pulvinar
-            ultricies est, vel porta dui commodo at.
+            A JF Arquitetura é uma empresa que foi criada em 2018 para satisfazer a
+            demanda de serviços de construção e reformas, vistoria predial e perícia de imóveis.
+            Essa firma teve crescimento moderado com um aumento de números de contratos a
+            partir do 2º semestre de 2018 em função do crescimento imobiliário no Rio de Janeiro.
           </p>
         </div>
       </div>
     </section>
     <section id="area-de-atuacao">
-      <div class="container">
+      <div class="container_grid">
         <h1 class="titulo">Área de Atuação</h1>
         <ul class="cards">
           <li class="grid-1-3">
@@ -307,8 +309,7 @@
       </div>
     </section>
     <section id="servicos-realizados">
-      <!--  Falar com a Luana sobre isso daqui URGENTE / tem coments no style.css  -->
-      <div class="container">
+      <div class="container_grid">
         <h1 class="titulo-branco">Serviços Realizados</h1>
         <ul class="album">
           <li class="album-molde grid-1-3">
@@ -323,18 +324,21 @@
               <div class="album-text ">Avaliação feita em Niteroí</div>
             </div>
           </li>
+<!--
           <li class="album-molde grid-1-3">
             <img class="album-image" src="img/album/niteroi/3.jpg" />
             <div class="album-hover">
               <div class="album-text ">Avaliação feita em Niteroí</div>
             </div>
           </li>
+-->
           <li class="album-molde grid-1-3">
             <img class="album-image" src="img/album/barra-da-tijuca/1.jpg" />
             <div class="album-hover">
               <div class="album-text ">Avaliação em Perícia de Imóveis na Barra da Tijuca</div>
             </div>
           </li>
+<!--
           <li class="album-molde grid-1-3">
             <img class="album-image" src="img/album/barra-da-tijuca/2.jpg" />
             <div class="album-hover">
@@ -347,30 +351,36 @@
               <div class="album-text ">Avaliação em Perícia de Imóveis na Barra da Tijuca</div>
             </div>
           </li>
+-->
           <li class="album-molde grid-1-3">
             <img class="album-image" src="img/album/barra-da-tijuca/4.jpg" />
             <div class="album-hover">
               <div class="album-text ">Avaliação em Perícia de Imóveis na Barra da Tijuca</div>
             </div>
           </li>
+<!--
           <li class="album-molde grid-1-3">
             <img class="album-image" src="img/album/barra-da-tijuca/5.jpg" />
             <div class="album-hover">
               <div class="album-text ">Avaliação em Perícia de Imóveis na Barra da Tijuca</div>
             </div>
           </li>
+-->
           <li class="album-molde grid-1-3">
             <img class="album-image" src="img/album/recreio/1.jpg" />
             <div class="album-hover">
               <div class="album-text ">Avaliação em Perícia de Imóveis no Recreio</div>
             </div>
           </li>
+<!--
           <li class="album-molde grid-1-3">
             <img class="album-image" src="img/album/recreio/2.jpg" />
             <div class="album-hover">
               <div class="album-text ">Avaliação em Perícia de Imóveis no Recreio</div>
             </div>
           </li>
+-->
+<!--
           <li class="album-molde grid-1-3">
             <img class="album-image" src="img/album/recreio/3.jpg" />
             <div class="album-hover">
@@ -395,6 +405,7 @@
               <div class="album-text ">Avaliação em Perícia de Imóveis no Recreio</div>
             </div>
           </li>
+-->
           <li class="album-molde grid-1-3">
             <img class="album-image" src="img/album/recreio/7.jpg" />
             <div class="album-hover">
@@ -406,7 +417,7 @@
       </div>
     </section>
     <section id="orcamento">
-      <div class="container">
+      <div class="container_grid">
         <h1 class="titulo">Orçamento</h1>
 
         <h2 class="subtitulo-preto">Atendemos apenas no Rio e Grande Rio</h2>
@@ -414,28 +425,116 @@
         <form action="recebe.php" method="post">
           <div class="contato_form grid-8">
             <label for="nome">Nome *</label>
-            <input type="text" id="nome" name="nome" placeholder="Ex.: Maria Joaquina Rodrigues" />
+            <input class="input_form" type="text" id="nome"  value="<?php if(isset($_SESSION['value_nome'])) {
+    
+    echo $_SESSION['value_nome'];
+     
+ }  ?>" name="nome" placeholder="Ex.: Maria Joaquina Rodrigues" />
+            <?php
+							if(!empty($_SESSION['value_nome'])){
+								//echo "value='".$_SESSION['value_nome']."'";
+								unset($_SESSION['value_nome']);
+                                echo"<br>";
+							}
+						 ?>	
+						 <?php
+							if(!empty($_SESSION['vazio_nome'])){
+								echo "<p style='color: #f00; '>".$_SESSION['vazio_nome']."</p>";
+								unset($_SESSION['vazio_nome']);
+                                echo"<br>";
+							}
+						 ?>
 
             <label for="email">E-mail *</label>
-            <input type="email" id="email" name="email" placeholder="Ex.: seuemail@gmail.com" />
+            <input class="input_form" type="email" id="email" value="<?php if(isset($_SESSION['value_email'])) {
+    
+    echo $_SESSION['value_email'];
+     
+ }  ?>" name="email" placeholder="Ex.: seuemail@gmail.com" />
+            <?php
+							if(!empty($_SESSION['value_email'])){
+								//echo "value='".$_SESSION['value_email']."'";
+								unset($_SESSION['value_email']);
+							}
+						 ?>
+						 <?php
+							if(!empty($_SESSION['vazio_email'])){
+								echo "<p style='color: #f00; '>".$_SESSION['vazio_email']."</p>";
+								unset($_SESSION['vazio_email']);
+							}
+						 ?>
 
             <label for="tel">Telefone</label>
-            <input type="text" id="tel" name="tel" placeholder="Digite seu DDD + número do telefone (opcional)" />
+            <input class="input_form" type="text" value="<?php if(isset($_SESSION['value_tel'])) {
+    
+    echo $_SESSION['value_tel'];
+     
+ }  ?>" id="tel" name="tel" placeholder="Digite seu DDD + número do telefone (opcional)" />
 
             <label for="cel">Celular *</label>
-            <input type="text" id="cel" name="cel" placeholder="Digite seu DDD + número do celular" autocomplete="off" />
+            <input class="input_form" type="text"  id="cel" value="<?php if(isset($_SESSION['value_cel'])) {
+    
+    echo $_SESSION['value_cel'];
+     
+ }  ?>" name="cel" placeholder="Digite seu DDD + número do celular" autocomplete="off" />
+            <?php
+							if(!empty($_SESSION['value_cel'])){
+								//echo "value='".$_SESSION['value_email']."'";
+								unset($_SESSION['value_cel']);
+							}
+						 ?>
+						 <?php
+							if(!empty($_SESSION['vazio_cel'])){
+								echo "<p style='color: #f00; '>".$_SESSION['vazio_cel']."</p>";
+								unset($_SESSION['vazio_cel']);
+							}
+						 ?>
 
             <label for="nomedopredio">Nome/Razão Social do prédio *</label>
-            <input type="text" id="nomedopredio" name="nomedopredio" placeholder="Ex.: Condomínio Vicente de Carvalho" />
+            <input class="input_form" type="text" value="<?php if(isset($_SESSION['value_predio'])) {
+    
+    echo $_SESSION['value_predio'];
+     
+ }  ?>" id="nomedopredio" name="nomedopredio" placeholder="Ex.: Condomínio Vicente de Carvalho" />
+            <?php
+							if(!empty($_SESSION['value_predio'])){
+								//echo "value='".$_SESSION['value_email']."'";
+								unset($_SESSION['value_predio']);
+							}
+						 ?>
+						 <?php
+							if(!empty($_SESSION['vazio_predio'])){
+								echo "<p style='color: #f00; '>".$_SESSION['vazio_predio']."</p>";
+								unset($_SESSION['vazio_predio']);
+							}
+						 ?>			
 
-            <label for="tel">Endereço do prédio *</label>
-            <input type="text" id="end" name="endereco" placeholder="Ex.: Rua São Clemente, 133" />
+            <label for="endereco">Endereço do prédio *</label>
+            <input class="input_form" type="text" id="end" value="<?php if(isset($_SESSION['value_endereco'])) {
+    
+    echo $_SESSION['value_endereco'];
+     
+ }  ?>"  name="endereco" placeholder="Ex.: Rua São Clemente, 133" />
+         <?php
+							if(!empty($_SESSION['value_endereco'])){
+								//echo "value='".$_SESSION['value_email']."'";
+								unset($_SESSION['value_endereco']);
+							}
+						 ?>
+						 <?php
+							if(!empty($_SESSION['vazio_endereco'])){
+								echo "<p style='color: #f00; '>".$_SESSION['vazio_endereco']."</p>";
+								unset($_SESSION['vazio_endereco']);
+							}
+						 ?>			
+         
+         
           </div>
 
           <div class="contato_form grid-8">
             <div class="tipo-de-servico">
               <label for="">Tipo de serviço *</label>
-              <select class="form-control" name="tipo_id" id="tipo_id" placeholder="" name="tipo_id">
+              <select class="form-control" required name="tipo_id" id="tipo_id" placeholder="" name="tipo_id">
                 <option value="" disabled selected>- Escolha -</option>
                 <?php
                include_once 'conexao.php';
@@ -460,26 +559,93 @@
 
           <div class="form_right grid-8">
             <label for="">Nº de andares *</label>
-            <input type="number" id="numeroAndares" name="andares" placeholder="Ex.: 10"  />
+            <input class="input_form" type="number" min="0" value="<?php if(isset($_SESSION['value_andares'])) {
+    
+    echo $_SESSION['value_andares'];
+     
+ }  ?>" id="numeroAndares" name="andares" placeholder="Ex.: 10"  />
+            
+							<?php
+							if(!empty($_SESSION['value_andares'])){
+								//echo "value='".$_SESSION['value_email']."'";
+								unset($_SESSION['value_andares']);
+							}
+						 ?>
+						 <?php
+							if(!empty($_SESSION['vazio_andares'])){
+								echo "<p style='color: #f00; '>".$_SESSION['vazio_andares']."</p>";
+								unset($_SESSION['vazio_andares']);
+							}
+						 ?>			
 
             <label for="">Nº de apartamentos ou salas *</label>
-            <input type="number" id="numeroAptoOuSalas" name="aps" placeholder="Ex.: 20" autocomplete="off"  />
+            <input class="input_form" type="number" value="<?php if(isset($_SESSION['value_apart'])) {
+    
+    echo $_SESSION['value_apart'];
+     
+ }  ?>" min="0" id="numeroAptoOuSalas" name="aps" placeholder="Ex.: 20" autocomplete="off"  />
+           <?php
+							if(!empty($_SESSION['value_apart'])){
+								//echo "value='".$_SESSION['value_email']."'";
+								unset($_SESSION['value_apart']);
+							}
+						 ?>
+						 <?php
+							if(!empty($_SESSION['vazio_apart'])){
+								echo "<p style='color: #f00; '>".$_SESSION['vazio_apart']."</p>";
+								unset($_SESSION['vazio_apart']);
+							}
+						 ?>			
+            
 
             <label for="">Nº de elevadores *</label>
-            <input type="number" id="numeroElevadores" name="elev" placeholder="Ex.: 3" autocomplete="off" />
+            <input class="input_form" type="number" value="<?php if(isset($_SESSION['value_elev'])) {
+    
+    echo $_SESSION['value_elev'];
+     
+ }  ?>" min="0" id="numeroElevadores" name="elev" placeholder="Ex.: 3" autocomplete="off" />
+            <?php
+							if(!empty($_SESSION['value_elev'])){
+								//echo "value='".$_SESSION['value_email']."'";
+								unset($_SESSION['value_elev']);
+							}
+						 ?>
+						 <?php
+							if(!empty($_SESSION['vazio_elev'])){
+								echo "<p style='color: #f00; '>".$_SESSION['vazio_elev']."</p>";
+								unset($_SESSION['vazio_elev']);
+							}
+						 ?>			
+            
 
             <label for="">Idade do prédio *</label>
-            <input type="number" id="idadePredio" name="idade" placeholder="Ex.: 50" autocomplete="off" />
+            <input class="input_form" type="number" value="<?php if(isset($_SESSION['value_idade'])) {
+    
+    echo $_SESSION['value_idade'];
+     
+ }  ?>" min="0" id="idadePredio" name="idade" placeholder="Ex.: 50" autocomplete="off" />
+         <?php
+							if(!empty($_SESSION['value_idade'])){
+								//echo "value='".$_SESSION['value_email']."'";
+								unset($_SESSION['value_idade']);
+							}
+						 ?>
+						 <?php
+							if(!empty($_SESSION['vazio_idade'])){
+								echo "<p style='color: #f00; '>".$_SESSION['vazio_idade']."</p>";
+								unset($_SESSION['vazio_idade']);
+							}
+						 ?>			
           </div>
           <div class="form_textarea grid-16">
             <label for="detalhe">Detalhe sua solicitação</label>
-            <textarea id="detalhe" name="det" placeholder="Descreva aqui com detalhes a sua solicitação"></textarea>
+            <textarea id="detalhe" name="det" maxlength="255" placeholder="Descreva aqui com detalhes a sua solicitação"></textarea>
           </div>
-          <button type="submit" class="btn grid-4">Enviar</button>
+          <button type="submit" class="botao grid-4">Enviar</button>
         </form>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="_footer">
       <p>JF Arquitetura - Todos os direitos reservados</p>
       <p>Feito com <span class="heart">❤</span> pelo Grupo D - 2019 CSI</p>
     </footer>

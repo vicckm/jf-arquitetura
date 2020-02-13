@@ -13,13 +13,14 @@ $query = "select usuario_id, usuario from usuario where usuario = '".$usuario."'
 $result = mysqli_query($con, $query);
 
 $row = mysqli_num_rows($result);
+$msg = "Senha ou usuário incorreto!";
 
 if($row == 1) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
-	header('Location:orcamento-adm.php');
+	header('Location:painel.php');
 } else {
-	header('Location:index.php');
+	header('Location:administrador.php?msg='.$msg);
 }
 
 ?>

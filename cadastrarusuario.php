@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-	<?php include 'imports.php'; ?>
+	<?php include 'imports.php'; 
+     include 'verificaLogin.php';
+    ?>
   <title>Administrador</title>
 </head>
 
@@ -14,23 +16,23 @@
         <img src="img/logo.jpg" alt="JF Arquitetura">
       </div>
       <div class="container_grid">
-        <h2 class="subtitulo">Seja bem-vindo!</h2>
-        <form action="login.php" method="post">
+        <h2 class="subtitulo">Cadastrar Usuário</h2>
+        <form action="gravar.php" method="post">
           <div class="form-card ">
             <label>Login</label>
-            <input type="text" name="usuario">
-
+            <input type="text" required name="usuario">
+             <label>Email</label>
+            <input type="Email"  required name="email">
             <label>Senha</label>
             <input type="password" name="senha">
+            <label>Confirmar Senha</label>
+            <input type="password" name="consenha">
             <button type="submit" class="botao-adm">Entrar</button>
           </div>
-          <a href="recuperar.php">Esqueceu sua senha?</a>
-          <h3 style="color: red; text-align: center;">
-           <?php
+          <h3 style="text-align:center; color: red;"><?php
             if(isset($_GET["msg"]))
-                echo $_GET["msg"];
-           ?>
-           </h3>
+               echo $_GET["msg"];
+           ?></h3>
         </form>
       </div>
     </section>

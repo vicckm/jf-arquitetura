@@ -11,7 +11,10 @@
   <title>JF Arquitetura</title>
 </head>
 
-<?php $msg = $_GET["msg"]; ?>
+<?php 
+    $msg = $_GET["msg"]; 
+    
+    ?>
 
 
 <body>
@@ -25,7 +28,7 @@
           <?php echo $msg; ?>
            
             
-          <a href="index.php" class="voltar">Voltar para página inicial</a>
+          <a href="administrador.php" class="voltar">Voltar para o painel de administrador</a>
         </div>
       </div>
     </section>
